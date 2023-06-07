@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AmbassaMatch</title>
+  <title>Your Website</title>
   <style>
     /* CSS code */
     /* Reset some default styles */
@@ -25,12 +25,34 @@
       padding: 0 20px;
     }
 
-    /* Landing Page Styles */
-    .landing {
+    /* Header Styles */
+    header {
+      background-color: #20273f;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    /* Hero Section Styles */
+    .hero {
       background-image: url('https://i0.wp.com/blog.radancy.com/wp-content/uploads/2022/10/Blog3_HR-BrandAmbassadors_1400x550.jpg?resize=1400%2C550&ssl=1');
       background-size: cover;
       background-position: center;
-      height: 100vh;
+      height: 500px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -38,19 +60,25 @@
       text-align: center;
     }
 
-    .landing-content {
+    .hero-content {
       max-width: 800px;
       margin: 0 auto;
     }
 
-    .landing h1 {
+    .hero h1 {
       font-size: 36px;
       margin-bottom: 20px;
     }
 
-    .landing p {
+    .hero p {
       font-size: 18px;
       margin-bottom: 10px;
+    }
+
+    .slogan {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 40px;
     }
 
     .btn {
@@ -66,16 +94,172 @@
     .btn:hover {
       background-color: #ff5500;
     }
+
+    /* Features Section Styles */
+    .features {
+      background-color: #f7f7f7;
+      padding: 60px 0;
+    }
+
+    .features h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: 500;
+      color: #20273f;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .feature-image {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-right: 40px;
+    }
+
+    .feature img {
+      width: 200px;
+      height: auto;
+    }
+
+    .feature-content {
+      flex-grow: 1;
+    }
+
+    .feature h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #20273f;
+      font-weight: 500;
+    }
+
+    .feature p {
+      font-size: 16px;
+      color: #777;
+    }
+
+    /* Testimonial Section Styles */
+    .testimonial {
+      background-color: #fff;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .testimonial h2 {
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: 500;
+      color: #20273f;
+    }
+
+    .testimonial-text {
+      margin-bottom: 20px;
+    }
+
+    .testimonial-text p {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #777;
+    }
+
+    .testimonial-image {
+      display: inline-block;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-image img {
+      width: 100px;
+      height: 100px;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #20273f;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <section class="landing">
-    <div class="landing-content">
-      <h1>Are you a...</h1>
-      <a href="./Businessowner.html" class="btn">Business Owner Looking for Campus Ambassadors</a>
-      <p>or</p>
-      <a href="#" class="btn">College Student Looking to Become a Campus Ambassador</a>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="./Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>AmbassaMatch</h1>
+      <p class="slogan">Building Connections, Empowering Success</p>
+      <a href="./Getstarted.html" class="btn">Get Started</a>
     </div>
   </section>
+
+  <section class="features">
+    <h2>Our Services</h2>
+    <div class="container">
+      <div class="feature">
+        <div class="feature-image">
+          <img src="https://global-uploads.webflow.com/6077f96cf4fa19216396daaf/61963e466e036a513b1790b0_sca%20responsibility.svg" alt="Feature 1">
+        </div>
+        <div class="feature-content">
+          <h3>Brand Ambassador Sales Internships</h3>
+          <p>We offer exciting brand ambassador sales internships to college students. Gain hands-on experience in sales, marketing, and customer engagement while representing top businesses and brands. Our internships provide valuable learning opportunities and help students kickstart their careers in the industry.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-image">
+          <img src="https://static.wixstatic.com/media/013885_3211ae7f78254cd28b4ad1ae405faa60~mv2.png/v1/fill/w_580,h_354,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/sa_students.png" alt="Feature 2">
+        </div>
+        <div class="feature-content">
+          <h3>Connecting Businesses and College Students</h3>
+          <p>We connect businesses with talented college students seeking brand ambassador sales internships. Our platform bridges the gap between businesses in need of enthusiastic ambassadors and students looking for valuable work experience. Join us to unlock new opportunities for your business or career.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-image">
+          <img src="https://www.producthood.com/wp-content/uploads/2019/11/undraw_work_chat_erdt.svg" alt="Feature 3">
+        </div>
+        <div class="feature-content">
+          <h3>Collaborative Learning Community</h3>
+          <p>Join our collaborative learning community where students, professionals, and businesses come together. Learn from industry experts, share insights, and build valuable connections. We believe in the power of collective growth and provide a supportive environment for everyone to thrive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial">
+    <h2>Testimonials</h2>
+    <div class="container">
+      <div class="testimonial-text">
+        <p>"Working with this recruiting firm has been an amazing experience. They helped me find the perfect brand ambassador sales internship, and I gained invaluable skills and connections. Highly recommended!"</p>
+      </div>
+      <div class="testimonial-image">
+        <img src="https://hogtalk.uark.edu/files/2019/07/headshot_6.png" alt="Testimonial 1">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 AmbassaMatch. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+
+
+
+
