@@ -1,0 +1,53 @@
+<script>
+    // Set up Stripe with your publishable key
+    var stripe = Stripe('pk_live_51NGAezKUg5zk3bixy4Mam901ZTnRTNBkn6lysxEySfrlJArk0axXBy6DUtMyaeXsYwELtuKUQ7PB8AhzM2fcjddQ00rC77KuTp');
+  
+    // Handle form submission
+    var form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      // Disable the submit button to prevent multiple clicks
+      form.querySelector('input[type="submit"]').disabled = true;
+  
+      // Retrieve card details from the form
+      var card = {
+        name: document.getElementById('cardholder_name').value,
+        number: document.getElementById('card_number').value,
+        expMonth: document.getElementById('expiration_date').value.split('/')[0].trim(),
+        expYear: document.getElementById('expiration_date').value.split('/')[1].trim(),
+        cvc: document.getElementById('cvv').value
+      };
+  
+      // Create a token and charge the card
+      stripe.createToken(card).then(function(result) {
+        if (result.error) {
+          // Display an error message to the user
+          var errorElement = document.getElementById('card-errors');
+          errorElement.textContent = result.error.message;
+        } else {
+          // Send the token to your server to process the payment
+          stripeTokenHandler(result.token);
+        }
+      });
+    });
+  
+    // Handle token submission to your server
+    function stripeTokenHandler(token) {
+      // Send the token to your server using an AJAX request
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '/process-payment');
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          // Payment was successful, show a success message to the user
+          alert('Payment successful!');
+        } else {
+          // Payment failed, show an error message to the user
+          alert('Payment failed. Please try again.');
+        }
+      };
+      xhr.send(JSON.stringify({ token: token.id }));
+    }
+  </script>
+  
