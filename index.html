@@ -188,20 +188,75 @@
       text-align: center;
     }
 
-    * CSS code goes here */
-    /* Styles for desktop view */
-    /* ... */
-
-    /* Styles for tablet view */
+    /* Styles for tablet and mobile view */
     @media (max-width: 768px) {
       /* Adjustments for tablet view */
-      /* ... */
+      .container {
+        padding: 0 10px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .slogan {
+        font-size: 20px;
+      }
+
+      .feature {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .feature-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .feature img {
+        width: 150px;
+      }
     }
 
-    /* Styles for mobile view */
     @media (max-width: 480px) {
       /* Adjustments for mobile view */
-      /* ... */
+      .hero h1 {
+        font-size: 24px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .slogan {
+        font-size: 18px;
+      }
+
+      .feature h3 {
+        font-size: 20px;
+      }
+
+      .feature p {
+        font-size: 14px;
+      }
+
+      .testimonial h2 {
+        font-size: 28px;
+      }
+
+      .testimonial-text p {
+        font-size: 16px;
+      }
+
+      .testimonial-image img {
+        width: 80px;
+        height: 80px;
+      }
     }
   </style>
 </head>
@@ -275,7 +330,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
