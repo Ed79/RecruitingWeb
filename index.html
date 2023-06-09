@@ -210,13 +210,19 @@
       }
     
       /* Styles for mobile view */
-      @media (max-width: 480px) {
-        /* Adjustments for mobile view */
-        nav ul li {
-          display: block;
-          margin-right: 0;
-          margin-bottom: 10px;
-        }
+@media (max-width: 480px) {
+  /* Adjustments for mobile view */
+  nav ul li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav ul li:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last link */
+  }
+}
+
       }
   
     
